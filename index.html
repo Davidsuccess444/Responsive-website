@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">logo</div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <i class="fa-solid fa-bars" id="toggle"></i>
+      </nav>
+    </header>
+
+    <section class="home">
+      <div class="home-content">
+        <h2>Welcome to</h2>
+        <h1>India</h1>
+      </div>
+    </section>
+
+    <script>
+      gsap.from('h1',1.2, {opacity:0, y:-150, delay: 0.5}) 
+      gsap.from('h2',1.2, {opacity:0, y:150, delay: 1.9})
+
+      const menu = document.querySelector('.menu');
+      const toggle = document.getElementaryId('toggle');
+
+      toggle.onclick = function(){
+        menu.classlist.toggle('active');
+      }
+    </script>
+  </body>
+</html>
